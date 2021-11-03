@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Yönetici Sayfası</title>
+    <link href="~/SettingCss/style.css" rel="stylesheet" />
+    <link href="~/SettingCss/employeeProcess.css" rel="stylesheet" />
+    <link href="~/SettingCss/notification-style.css" rel="stylesheet" />
+    <link href="~/SettingCss/employeeList.css" rel="stylesheet" />
+    <link href="~/SettingCss/dayOffRequest.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+</head>
+<body>
+
+    <input type="checkbox" id="sidebar-toggle">
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h3 class="brand">
+                <span>Hmrs Nuget</span>
+            </h3>
+            <label for="sidebar-toggle" class="ti-menu-alt"></label>
+        </div>
+        <div class="sidebar-menu">
+            <ul>
+                <li>
+                    <a href="">
+                        <span class="ti-target"></span>
+                        <span>Talep Et</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <span class="ti-home"></span>
+                        <span>Anasayfa</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="calisanlar.html">
+                        <span class="ti-user"></span>
+                        <span>Çalışanlar</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="izinler.html">
+                        <span class="ti-pencil-alt"></span>
+                        <span>İzinler</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="ti-calendar"></span>
+                        <span>Takvim</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="ti-layout-grid3"></span>
+                        <span>Uygulamalar</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="yorumlar.html">
+                        <span class="ti-comments"></span>
+                        <span>Yorumlar</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="ayarlar.html">
+                        <span class="ti-settings"></span>
+                        <span>Ayarlar</span>
+                    </a>
+                </li>
+                <li>
+                    <div class="notification-icon" onclick="toggleNotifi()">
+                        <i class="ti-bell"></i><span>  Bildirimler</span>
+                    </div>
+                    <div class="notification-box" id="box">
+                        <h2>Yeni Bildirimler <span>3</span></h2>
+                        <div class="notification-item">
+                            <div class="text">
+                                <h4>Özgür Baybaş</h4>
+                                <p>Yeni Yeni bir çok bildirim</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="ti-power-off"></span>
+                        <span>Çıkış Yap</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <div class="search-wrapper">
+                <span class="ti-search"></span>
+                <input type="search" placeholder="Birşeyler Ara :)">
+            </div>
+            <div>
+                <div class="button">
+                    <form action="calisanEkle.html">
+                        <input type="submit" value="Yeni Çalışan Ekle" />
+                    </form>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <main>
+
+        <div id="detailViewContainerId" class="detailViewContainer">
+            <div id="itemsContainer" class="itemsEmployeeContainer">
+                <div id="itemTitle" class="itemEmployeeTitle">
+                    <span>
+                        <div id="itemAvatarColor" class="itemEmployeeAvatar">
+                            <div class="letter-avatar">AÇ</div>
+                        </div>
+                    </span>
+                    <div class="info">
+                        <div class="name">
+                            Ahmet Çamkıran
+                        </div>
+                        <div class="title">
+                            Halkla İlişkiler Uzmanı
+                        </div>
+                        <div class="email">
+                            info@monitepol.com
+                        </div>
+                    </div>
+                    <div class="table-card">
+                        <table>
+                            <thead>
+                                <tr>
+
+                                    <th><a href="zimmetEkle.html"><span class="ti-id-badge"></span></a></th>
+                                    <th><a href="odemeEkle.html"><span class="ti-money"></span></a></th>
+                                    <th><a href="mesaiEkle.html"><span class="ti-write"></span></a></th>
+
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
+
+<script src="~/PageScripts/script.js"></script>
+<script src="~/PageScripts/dayOffRequest.js"></script>
+<script src="~/PageScripts/debitAdd.js"></script>
+<script src="~/PageScripts/addPayment.js"></script>
+<script src="~/PageScripts/avatarColor.js"></script>
